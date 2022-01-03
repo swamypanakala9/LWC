@@ -1,0 +1,22 @@
+<apex:page controller="SelectedAccountDelete"  >
+<Apex:form >
+<Apex:pageBlock >
+<Apex:outputText value="Search : "></Apex:outputText>
+<apex:inputText value="{!SearchVar}"/>
+<Apex:pageBlockSection >
+<apex:pageBlockTable value="{!Acc}" var="v">
+<apex:column value="{!v.Name}"/>
+<apex:column value="{!v.type}"/>
+
+
+</apex:pageBlockTable>
+
+
+</Apex:pageBlockSection>
+
+
+</Apex:pageBlock>
+</Apex:form>
+
+  
+</apex:page>

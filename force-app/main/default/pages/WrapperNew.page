@@ -1,0 +1,24 @@
+<apex:page controller="WrapperNewClass" readOnly="true">
+    <apex:sectionHeader title="Wrapper Class Example" subtitle="Select And Delete Records" description="This is Description"/>
+  <apex:form >
+    <apex:pageBlock >
+      <apex:pageBlockSection title="Section Wrapper">
+            <apex:pageBlockTable value="{!listIC}" var="v" >  
+                  <apex:column > 
+                  <apex:facet name="header" > <apex:inputCheckbox /> </apex:facet>  
+                    <apex:inputCheckbox value="{!v.Check}"/>
+                </apex:column>
+             <apex:column value="{!v.Acc.Name}"/>
+             <apex:column value="{!v.Acc.phone}"/>
+               
+             </apex:pageBlockTable>  
+          <apex:pageBlockTable title="Selected Records" value="{!SelectedAccount}" var="v1">
+              <apex:column value="{!v1.Name}"/>
+          </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons location="top" >
+        <apex:commandButton action="{!DeleteSelRecords}" value="Delete Records" style="width:150px;height:50px;color:white;background:blue"/>
+            </apex:pageBlockButtons>
+    </apex:pageBlock>
+      </apex:form>
+</apex:page>

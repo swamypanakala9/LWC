@@ -1,0 +1,20 @@
+<apex:page controller="VFDmal_Class">
+    <apex:form >
+       
+        <apex:pageBlock title="Page Block">
+            <apex:pageBlockButtons >
+           <apex:commandButton action="{!insertRec}" value="Save Records"/>
+        </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Account Record" collapsible="false">
+                 <apex:inputField value="{!acc.name}"/>
+                <apex:inputField value="{!acc.phone}"/>
+                <apex:inputField value="{!acc.industry}"/>
+             </apex:pageBlockSection>
+            <apex:pageBlockSection title="Opportunity Record" columns="1">
+                <apex:inputField value="{!opp.name}"/>
+                <apex:inputField value="{!opp.closedate}"/>
+                <apex:inputField value="{!opp.stagename}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

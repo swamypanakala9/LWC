@@ -1,0 +1,15 @@
+<apex:page id="ActionStatusEx" controller="ActionStatusEx">
+    <apex:form >
+        <apex:commandButton value="Count" action="{!doCount}">
+           <apex:actionSupport reRender="counters" event="onclick"/> 
+        </apex:commandButton>
+        <p></p>
+        <apex:outputPanel id="counters">
+            <apex:outputText value="static counter: {!staticCounter}"/>
+            <p></p>
+            <apex:outputText value="viewstate counter: {!viewStateCounter}"/>
+        </apex:outputPanel>
+         <apex:outputText value="static counter: {!staticCounter}"/>
+         <apex:outputText value="viewstate counter: {!viewStateCounter}"/>
+    </apex:form>
+</apex:page>

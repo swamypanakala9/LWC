@@ -1,0 +1,21 @@
+<apex:page standardController="Contact" recordSetVar="c" >
+<apex:form >
+<apex:pageBlock title="Account Data">
+
+<apex:pageblockTable value="{!c}" var="a" >
+
+<apex:column value="{!a.Name}"/>
+<apex:column >
+<apex:outputField value="{!a.Name}"/>
+</apex:column>
+<apex:column >
+<apex:outputField value="{!a.Name}"/>
+</apex:column>
+
+</apex:pageBlockTable>
+
+</apex:pageBlock>
+<apex:commandButton action="{!Previous}" value="Previous"/>
+ <apex:commandButton action="{!Next}" value="Next" />
+ </apex:form>
+</apex:page>

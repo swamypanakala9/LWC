@@ -1,0 +1,12 @@
+<apex:page controller="ActionStatusNewEx" >
+     <apex:form >
+             <apex:inputText value="{!Selected}" id="one"  style="background-color:blue;height:50pX;width :180px"/>
+             <apex:outputText value="{!Selected}"/>
+             <apex:selectList size="1" value="{!Selected}" style="background-color:pink;height:60pX;width :180px">
+                 <apex:selectOptions value="{!ListSel}"/>
+                 <apex:actionSupport event="onchange" reRender="one" /> 
+                </apex:selectList>              
+        <apex:outputLabel id="one1" style="background-color:green;font-size:60px;border:20px;height:50pX;width :180px" >Selected One is : {!Selected} </apex:outputLabel>
+          
+          </apex:form>
+</apex:page>

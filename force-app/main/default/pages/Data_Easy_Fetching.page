@@ -1,0 +1,22 @@
+<apex:page controller="Visual_Force_Data_Easy_Fetching">
+<apex:pageBlock >
+<apex:pageBlockSection columns="1" title="Type1">
+<apex:pageblockTable value="{!Tollywood}" var="a">
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.Hero_Name__c}"/>
+<apex:column value="{!a.Rating__c}"/>
+</apex:pageblockTable>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection columns="1" title="Type2">
+<apex:pageblockTable value="{!Tollywood5}" var="a">
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.Hero_Name__c}"/>
+
+</apex:pageblockTable>
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+ 
+</apex:page>

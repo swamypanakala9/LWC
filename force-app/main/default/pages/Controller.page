@@ -1,0 +1,6 @@
+<apex:page standardController="Account" sidebar="false" >
+you are viewing {!account.name}<br></br>
+you are viewing {!account.Accountnumber}<br></br>
+<apex:detail relatedList="false" />
+
+</apex:page>

@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <lightning:card title='Slider'>  
+        <lightning:tile label="Lightning slider component" href="/path/to/somewhere">
+            <lightning:slider label="Volume"/>
+            <!--  <lightning:slider label="Volume" type="vertical"/>   -->
+        </lightning:tile>
+    </lightning:card> 
+</aura:component>

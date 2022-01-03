@@ -1,0 +1,15 @@
+<apex:page >
+ <apex:panelBar >
+ <apex:panelBarItem label="Item1" onenter="alert('on enter test');" onleave="alert('pressed onleave');"> Hello how are you ???? </apex:panelBarItem>
+  <apex:panelBarItem label="Item2"> Hello how are you 2 ???? </apex:panelBarItem>
+   <apex:panelBarItem label="Item3"> Hello how are you 3 ???? </apex:panelBarItem>   
+ </apex:panelBar>
+ 
+ <apex:panelGrid bgcolor="blue"  columns="2" id="theGrid" border="3">
+ <apex:outputtext value="First"></apex:outputtext>
+ <apex:outputtext value="First"></apex:outputtext>
+ <apex:outputtext value="First"></apex:outputtext>
+ <apex:outputtext value="First"></apex:outputtext>
+ <apex:outputtext value="First"></apex:outputtext>
+ </apex:panelGrid>
+</apex:page>

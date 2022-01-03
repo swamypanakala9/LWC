@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    Milk Component
+    <aura:attribute name='Milk' type='Decimal' default='0.1'/>
+    <aura:attribute name='Water' type='Decimal' default='0.1'/>
+     <aura:registerEvent name = "TeaAppEvent" type = "c:TeaAppEvent"/>   
+    <aura:handler  event = "c:TeaAppWater" action = "{!c.WaterHandleEvt}"/>  
+     <div class="c-container">
+        <lightning:layout horizontalAlign="spread">
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box"> Milk = {!v.Milk} 
+                 <lightning:input type="Decimal" value="{!v.Milk}" label="Enter Milk Qty" onchange ="{!c.MilkEventFire}"/>               
+                </div>               
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box">Water = {!v.Water}</div>               
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+ 
+	
+</aura:component>

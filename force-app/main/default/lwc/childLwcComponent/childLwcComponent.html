@@ -1,0 +1,20 @@
+<template>
+    <strong>This is child component results : {childValue} </strong> </br>
+    <lightning-card title={client} class="card">        
+        <strong>Client Name : </strong> {client}  </br>
+        <strong>Project Name : </strong> {project}  <strong>Duration: </strong> {duration} </br>
+       <lightning-input label="Provide you Feedback" type="text" value={Feedback}
+       onchange={customEventhandler} ></lightning-input>
+    </lightning-card>    
+    <lightning-card title="Hello">
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <lightning-button label="Old" slot="actions"></lightning-button>
+        <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+        <div slot="footer">
+            <a class="slds-card__footer-action" href="javascript:void(0);"
+                >View All
+                <span class="slds-assistive-text">Accounts</span>
+            </a>
+        </div>
+    </lightning-card>
+</template>

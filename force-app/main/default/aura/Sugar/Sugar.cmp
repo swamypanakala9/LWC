@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	Sugar Component
+    <aura:attribute name='Sugar' type='Decimal' default='0.1'/>
+     <aura:attribute name='Milk' type='Decimal' default='0.1'/>
+    <aura:attribute name='Water' type='Decimal' default='0.1'/>
+    
+     <div class="c-container">
+        <lightning:layout horizontalAlign="spread">
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box"> Sugar = {!v.Sugar}  </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box"> Milk = {!v.Milk}  </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box">Water = {!v.Water}</div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

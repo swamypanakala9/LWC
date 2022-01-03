@@ -1,0 +1,21 @@
+<apex:page sidebar="false" >
+<apex:pageBlock >
+<apex:pageBlockSection >
+<apex:pageblockSectionItem >
+First name of logged : {! $User.FirstName} <br> </br>
+First name and Last name : {!$User.FirstName & ' '& $User.LastName} <br> </br>
+</apex:pageblockSectionItem>
+<apex:pageblockSectionItem >
+Today date: {! Today()} <br> </br>
+Year :{!YEAR(Today())}<br> </br>
+</apex:pageblockSectionItem>
+</apex:pageBlockSection>
+<apex:pageBlockSection >
+<apex:pageblockSectionItem >
+Month:{!month(Today())}
+Today Date:{!YEAR(Today())}-{!month(Today())}-{!day(Today())} <br> </br>
+Maximum number: {! MAX(23,56,43,87)}
+</apex:pageblockSectionItem>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

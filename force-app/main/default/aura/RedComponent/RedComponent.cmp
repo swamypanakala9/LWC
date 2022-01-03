@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	    <aura:attribute name="eventMessage" type="String" />	
+        <aura:handler name="SE" event="c:ChildToParent" action="{!c.RedCompAction}"/> 
+    fgchj
+   <p>{!v.eventMessage}
+    </p>
+
+</aura:component>

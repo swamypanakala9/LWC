@@ -1,0 +1,4 @@
+<!--2 nd step to create event(it acts like a carrier)  -->
+<aura:event type="COMPONENT" description="Sample Component Event">  
+<aura:attribute name="AppEventVariable" type="String"/>
+</aura:event>

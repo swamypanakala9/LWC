@@ -1,0 +1,23 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	Hello from Parent
+    <aura:attribute name="contactName" type="String" default="Testing"/>
+     <aura:attribute name="ChildVariable" type="String" />
+    // 6 th step define handler to take  value from event
+    <aura:handler name="SE" event="c:ChildToParent" action="{!c.parentComponentEvent}"/>  
+    <lightning:input
+                     name="Enter Serach"
+                     label="Parent Component Input"
+                     type="Search"
+                     value="{!v.contactName}"
+                     />
+    {#v.contactName}
+    {!v.contactName}
+    <div>
+    Child Component Execution---------->
+        <c:ChildComponent ChildName="{!v.contactName}"/>
+        
+    </div>
+    <div>
+        value from child ::: {!v.ChildVariable}
+    </div>
+</aura:component>

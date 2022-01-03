@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:attribute name="ChildName" type="String"/>
+    <aura:attribute name="ChildToParent" type="String"/>  //1 st step to define child attribute
+    <aura:registerEvent name="SE" type="c:ChildToParent"/>  //3 rd step Register event 
+    <div>
+    Value in Child from Parent::
+        {!v.ChildName}
+    </div>
+    <div onkeyup="{!c.handleKeyUp}">  // 4 th step Create onkeyup action
+                  <lightning:input
+                     name="Enter Serach"
+                     label="child Component Input"
+                     type="Search"
+                     value="{!v.ChildToParent}"
+                     />
+    
+               </div>
+    </aura:component>

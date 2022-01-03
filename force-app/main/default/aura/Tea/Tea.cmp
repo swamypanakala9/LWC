@@ -1,0 +1,45 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    Tea Component <br></br> 
+    <!--  <aura:handler name = "TeaAppEvent" event = "c:TeaAppEvent" action = "{!c.HandleEvt}"/>   //DONT GIVE NAME, if WON'T Handle -->
+    <aura:handler  event = "c:TeaAppEvent" action = "{!c.MilkHandleEvt}"/>  
+    <aura:handler  event = "c:TeaAppWater" action = "{!c.WaterHandleEvt}"/>  
+        
+    <aura:attribute name='MilkQty' type='Decimal' Default = '0.1' />
+    <aura:attribute name='WaterQty' type='Decimal' Default='0.1'/>
+    <aura:attribute name='SugarQty' type='Decimal' Default='0.1'/>
+    <aura:attribute name='TotalQty' type='Decimal' Default='0.1'/>
+    <lightning:button variant="brand" label="Brand" title="Brand action" onclick="{! c.handleClick }" />
+    
+    <div class="c-container" onmouseover="{! c.handleClick }">
+        <lightning:layout horizontalAlign="spread">
+            <lightning:layoutItem padding="around-large">
+                <div onmouseover="{! c.handleClick }" class="custom-box"> MilkQty = {!v.MilkQty}  </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box">WaterQty = {!v.WaterQty}</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box">SugarQty = {!v.SugarQty} </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box">TotalQty = {!v.TotalQty} </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    
+         <div class="c-container">
+        <lightning:layout horizontalAlign="spread">
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box"> <c:Milk/>  </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box"> <c:Water/> </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-large">
+                <div class="custom-box"><c:Sugar/></div>
+            </lightning:layoutItem>            
+        </lightning:layout>
+    </div>  
+    
+    
+</aura:component>

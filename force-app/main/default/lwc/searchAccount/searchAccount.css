@@ -1,0 +1,17 @@
+.mypad {
+    padding: 20px;
+    background-color: hsl(249, 81%, 41%);
+    font-optical-sizing: auto;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 8px;
+    border-radius: 1rem;
+}
+
+.mypadred {
+    padding: 20px;
+    background-color: hsl(0, 81%, 41%);
+    font-optical-sizing: auto;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 8px;
+    border-radius: 1rem;
+}

@@ -1,0 +1,4 @@
+<apex:page sidebar="false" >
+ {! if(contains('NarayanaSwamy','Swamy'),'Swamy is there in NarayanaSwamy','not there')} <br> </br>
+ {! if(contains('NarayanaSwamy','PSwamy'),'Swamy is there in NarayanaSwamy','not there')}
+</apex:page>

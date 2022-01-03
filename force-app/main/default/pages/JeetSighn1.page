@@ -1,0 +1,16 @@
+<apex:page controller="JeethSighn1" >
+<apex:form >
+<apex:pageblock >
+<apex:pageblockSection columns="1" title="Section1" >
+    {!msg} <br/>
+    <apex:commandButton value="Dispaly Budget Amount" action="{!Val}" />
+   Budget is: {!Budget.Budget__c}
+ <apex:pageBlockTable value="{!Budget}" var="v">
+ <apex:column value="{!v.name}"/>
+ <apex:column value="{!v.Budget__c}"/>
+ 
+ </apex:pageBlockTable>
+  </apex:pageblockSection>  
+ </apex:pageblock> 
+ </apex:form>
+ </apex:page>

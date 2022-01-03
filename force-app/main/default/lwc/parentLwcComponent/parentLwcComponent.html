@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <strong>We received Feedback from Child : {childFeedback}</strong>
+    </lightning-card>
+    
+    <template for:each={sampledata} for:item="data">
+        <c-child-lwc-component  child-value={parentValue} key={data.Project} 
+        project={data.Project} client={data.Client} duration={data.duration}
+        onmyevent={handleChildResponse}>
+        </c-child-lwc-component> 
+    </template>
+</template>

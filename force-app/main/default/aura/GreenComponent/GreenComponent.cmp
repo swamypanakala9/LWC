@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="GCV" type="String" />	
+        <aura:registerEvent name="SE" type="c:ChildToParent"/> 
+      <lightning:input
+                     name="Enter Serach"
+                     label="Green Component Input"
+                     type="Search"
+                     value="{!v.GCV}"
+                     />
+    <lightning:button label="Click fire event" variant="brand" onclick="{!c.fireEvent}"/>
+</aura:component>

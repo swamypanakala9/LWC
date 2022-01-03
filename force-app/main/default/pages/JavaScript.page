@@ -1,0 +1,20 @@
+<apex:page id="pg" rendered="true" >
+{!$Profile.Name}
+  <apex:form id="fm">
+  <apex:inputtext id="in1" onchange="Call()"/> 
+      <apex:commandButton value="Call Fun" onmousemove="Call2()" />
+  <apex:commandButton value="Call2 function" onclick="Call2()" />
+      <apex:inputCheckbox onchange="Call2()" id="checkbox" />
+    </apex:form>
+    <script>
+    function Call(){
+      var v1 = document.getElementById("pg:fm:in1").value;
+      alert(v1);
+        alert('U changes text value');
+      document.getElementById("pg:fm:in1").value = 'Set this Text :'+v1;
+      }
+       function Call2(){
+     alert('hi how are you 2 ');
+     }
+    </script>
+</apex:page>

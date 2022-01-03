@@ -1,0 +1,8 @@
+<apex:page controller="ActionPollerController" >
+<apex:form >
+<apex:pageBlock title="Action Pollar Ex" id="BlockID">
+<p> Conter Value is {!Counter} </p>
+<apex:actionPoller action="{!IncrementMethod}" interval="500" reRender="BlockID"/>
+</apex:pageBlock>
+ </apex:form>
+</apex:page>

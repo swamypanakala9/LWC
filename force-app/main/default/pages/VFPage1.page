@@ -1,0 +1,30 @@
+<apex:page sidebar="false" showHeader="false">
+<apex:form >
+<apex:pageMessage summary="Validataion message" severity="hds" strength="2"> </apex:pageMessage>
+                Enter Name:<apex:inputText id="name" /> <br></br>
+                Enter Password:<apex:inputSecret id="pass"/>
+                Enter coverletter:<apex:inputtextarea id="letter"/>
+                
+<apex:pageMessage summary="Validataion message" severity="Error" Strength="3"></apex:pageMessage>
+<apex:commandButton value="save left" />
+<h1> HEADER </h1> <br></br>
+<apex:pageBlock title="PAGE BLOCK">
+<apex:pageBlockSection title="PAGEBLOCK SECTION 1">
+<apex:pageBlockSectionItem > </apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem > Item 1</apex:pageBlockSectionItem> 
+<apex:pageBlockSectionItem > Item 1</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem > Item 1</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem > Item 1</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="PAGEBLOCK SECTION 2"></apex:pageBlockSection>
+<apex:pageBlockButtons >
+<apex:commandButton value="save" />
+</apex:pageBlockButtons>
+
+<apex:outputLabel value="ENTER NAME" for="name1"></apex:outputLabel>
+<apex:inputtext id="name1" /> <br></br>
+<apex:outputlink value="https://www.udemy.com/courses/search/?q=apex%20salesforce&src=sac&kw=APEX ">Output link</apex:outputlink>
+</apex:pageBlock>
+<h1> FOOTER </h1>
+</apex:form>
+</apex:page>

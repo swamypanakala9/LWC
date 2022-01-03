@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name='var1' type='Integer' default='789' />
+    
+    <lightning:card title='TEST'>
+        
+        <lightning:tile >                     
+            
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-box slds-box_xx-small">
+                    <span><ui:inputNumber label="Enter a number: " value="{!v.var1}" updateOn="keyup"/> <br/></span>
+                </div>
+                <div class="slds-col">
+                    <span><lightning:input type="date" name="input1" label="Enter a date" />  </span>
+                </div>
+            </div>
+        </lightning:tile>
+    </lightning:card>
+    <lightning:card>
+        <lightning:tile>
+            {!v.var1}
+        </lightning:tile>
+    </lightning:card>
+    
+</aura:component>

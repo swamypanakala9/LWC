@@ -1,0 +1,17 @@
+<apex:page controller="CustomControllerVF" >
+<apex:form >
+<apex:pageBlock title="BLOCK">
+{!ST} 
+{!ST1} 
+<apex:inputText value="{!ST1}"/>
+<apex:pageblockSection title="SECTION" >
+  
+  <apex:inputField value="{!Con.Lastname}"/>
+  <apex:inputfield value="{!Con.phone}"/>
+  </apex:pageblockSection>
+  </apex:pageBlock>
+  <apex:commandButton action="{!DML}" value="Save"/>
+  <apex:commandButton action="{!DML1}" value="Save1"/>
+  </apex:form>
+
+</apex:page>

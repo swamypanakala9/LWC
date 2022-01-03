@@ -1,0 +1,20 @@
+<apex:page controller="Visual_Force_Data_Display" >
+<apex:form >
+<apex:pageblock >
+
+<apex:pageBlockButtons >
+<apex:commandButton value="Type 1 Records" action="{!Type1_Tollywood}"/>
+<apex:commandButton value="Type 2 Records" action="{!Type2_Tollywood}"/>
+
+</apex:pageBlockButtons>
+
+<apex:pageBlockTable value="{!Tollywood}" var="a">
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.Rating__c}"/>
+<apex:column value="{!a.Hero_Name__c}"/>
+
+</apex:pageBlockTable>
+
+</apex:pageblock>
+</apex:form>
+</apex:page>

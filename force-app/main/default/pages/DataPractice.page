@@ -1,0 +1,25 @@
+<apex:page controller="VF_DataPractice" >
+<apex:form >
+<apex:pageBlock title="Block">
+<apex:pageBlockButtons title="Button" >
+<apex:commandButton value="Selected Records" action="{!Selected}"/>
+
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="Section">
+<apex:pageBlockTable value="{!AccList}" var="v">
+<apex:column value="{!v.Name}"/>
+<apex:column value="{!v.id}"/>
+<apex:column value="{!v.phone}"/>
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Section 2">
+<apex:pageBlockTable value="{!SelectedAccount}" var="v1">
+<apex:column value="{!v1.Name}"/>
+<apex:column value="{!v1.id}"/>
+<apex:column value="{!v1.phone}"/>
+</apex:pageBlockTable>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>  
+</apex:page>

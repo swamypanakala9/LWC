@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name ='Int1' type ='Integer' default='25' />
+    <aura:attribute name ='Int2' type ='Integer' default='26' />
+    {!v.Int1}
+    <aura:if isTrue='{!v.Int2 >20}'>
+    True value            
+    </aura:if>
+    <aura:handler name='init' value='{!this}' action='{!c.doInit}'/>
+    
+</aura:component>

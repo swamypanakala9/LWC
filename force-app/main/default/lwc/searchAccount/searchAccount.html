@@ -1,0 +1,19 @@
+<template>
+    <strong>Welcom to LWC {ConcateValue}</strong> </br>
+    {AccountName1} </br>
+    {AccountName2}
+    <lightning-input type="text" value={AccountName1} onchange={handleA1} ></lightning-input>
+    <lightning-input type="text" value={AccountName2} onchange={handleA2}></lightning-input>
+
+    <template for:each={A1Result} for:item="acc1">
+        <div key={acc1.Id} class={dynamicClass}>
+              <template if:true={acc1.Phone}>                  
+          <strong> Name : {acc1.Name}</strong> </br>
+                     id : {acc1.Id},</br> 
+                  Phone : {acc1.Phone}
+              </template>
+
+</div>
+</template>
+
+</template>

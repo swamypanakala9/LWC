@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	Hi This is Child Component
+    <aura:attribute name='v1' type ='String' />
+    <lightning:input type='text' value='{!v.v1}' onchange ="{!c.EventFire}"/> <BR/>
+    Variable value entered from child component : {!v.v1}
+    <aura:registerEvent name = "Event1" type = "c:cTop"  />
+   <!--    <c:Vaiables_LC/>   -->
+  </aura:component>

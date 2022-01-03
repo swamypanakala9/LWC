@@ -1,0 +1,16 @@
+<apex:page readOnly="true" controller="MainObjectController" >
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection >
+
+<APEX:INPUTText value="{!SampleText2}" />
+<apex:commandButton value="Search" action="{!Search1}" reRender="Table"/>
+<apex:pageBlockTable value="{!RecordTestRecord}" var="v" id="Table">
+<apex:column value="{!v.name}"/>
+<apex:column value="{!v.Rating__c}"/>
+
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+</apex:pageBlock>
+ </apex:form>
+</apex:page>

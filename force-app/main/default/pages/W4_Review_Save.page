@@ -1,0 +1,14 @@
+<apex:page controller="Wizard" >
+<apex:form >
+  <apex:pageblock >
+  <apex:pageBlockSection title="Review Page">
+  Please check all values before save/insert
+   <apex:inputField value="{!a.name}" />
+   <apex:inputField value="{!c.Firstname}" />
+  
+  <apex:commandButton value="Save All" action="{!InsertRecords}"/>
+  <apex:commandButton value="Previous Page" action="{!Opportunity_Page}"/>
+  </apex:pageBlockSection>
+  </apex:pageblock>
+  </apex:form>
+</apex:page>

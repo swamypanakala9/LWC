@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	<h1>Hello waorld 2</h1>
+    <aura:attribute name = "var1" type ="String" default = "swamy" />
+    Var1 name : {!v.var1} <br/>
+    <aura:iteration items = "one,two,three,four,five" var ="v1" >
+        {!v1} <br/>
+   </aura:iteration>
+   
+</aura:component>

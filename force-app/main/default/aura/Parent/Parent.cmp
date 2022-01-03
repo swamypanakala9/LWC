@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	 <c:Child />
+    Hi This is Parent Component
+    <aura:attribute name="messageFromEvent" type="String"/>
+    <aura:attribute name="numEvents" type="Integer" default="0"/>
+    <aura:attribute name='ChildMessage' type='String' />
+ <!--   <aura:handler name = "init" value = '{!this}' action ="{!c.doinit1}" />    -->
+    <aura:handler name = "Event1" event = "c:cTop" action = "{!c.HandleEvt}"/>
+    <lightning:button label="action" onclick = "{!c.HandleEvt}"/>
+   
+  <p>{!v.messageFromEvent}</p>
+    <p>Number of events: {!v.numEvents}</p>
+    <p> Child Message Displayed in Parent Component : {!v.ChildMessage}</p>
+   
+</aura:component>

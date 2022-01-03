@@ -1,0 +1,35 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="TestArr" type="String[]" default="a,b,c,d,e,f,g,h,i,j,k" />
+    <lightning:layout horizontalAlign="center">
+    <lightning:layoutItem padding="around-medium">
+        <lightning:select name='selectItem' aura:id="carTypeList" label='All Tys' variant= "label-hidden" value="" >
+            <option value="" text="All types(Default)"/>
+            <option value="" text="Option 1"/>
+            <option value="" text="Option 2"/>
+          
+         </lightning:select>       
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem padding="around-medium">
+                
+      <lightning:button variant="brand" label='Search'/>  
+    <lightning:button variant="neutral" label='New'/>
+              <lightning:button variant="brand" label='Search'/>  
+    <lightning:button variant="neutral" label='New'/>
+            
+            <lightning:select name='sel' aura:id="cart" label='Al' variant= "label-hidden" value="c" >
+            <option value="hjgukj" text="AlDefault"/>
+            <option value="hjg" text="hjg"/>
+            <option value="b" text="Optin 2"/>
+                
+                 <aura:iteration items="{!v.TestArr}" var="item">
+        <option value="{!item}" text="{!item}"/><br/>
+    </aura:iteration>
+          
+         </lightning:select>   
+    
+            
+            </lightning:layoutItem>    
+    
+    </lightning:layout>
+</aura:component>

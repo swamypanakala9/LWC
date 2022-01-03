@@ -1,0 +1,19 @@
+<apex:page controller="actionFunctionClass" >
+<apex:form >
+
+<apex:inputtext label="Text2" value="{!Text2}" id="out"/>
+
+<!--  <apex:commandButton value="callMethod" action="{!callText }"/>  -->
+<script>
+alert('hi h r u');
+alert('hi h r u');
+alert('hi h r u');
+window.onload = function(){
+ActionButton('hi hellow');}
+
+</script>
+<apex:actionFunction action="{!callText2 }" name="ActionButton" reRender="out"/>
+<apex:param value="Message" name="" assignTo="{!Text2}"/>
+
+</apex:form>
+</apex:page>

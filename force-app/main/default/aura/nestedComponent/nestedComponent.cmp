@@ -1,0 +1,17 @@
+<aura:component >
+    this file include other components
+    <c:helloHTML/>
+    <c:helloAttribute whom="component composition"/>
+    <br></br>
+    
+    //*******Checking if condition********//
+    <br></br>
+    <aura:attribute name="edit" type="Boolean" default="false"/>
+    <aura:if isTrue="{!v.edit}">
+        <ui:button label="Submit"/>
+    <aura:set attribute="else">
+    This is  else condition text    
+     </aura:set>
+      </aura:if>
+	
+</aura:component>

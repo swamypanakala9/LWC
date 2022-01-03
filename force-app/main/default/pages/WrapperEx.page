@@ -1,0 +1,38 @@
+<apex:page controller="WrapperClass" >
+<apex:form >
+<apex:pageBlock title="Page Block">
+<apex:pageBlockSection title="Page Block Section for All records">
+<apex:pageBlockTable value="{!RecordList}" var="r">
+
+<apex:column headerValue="Check Box">
+            <apex:inputCheckbox value="{!r.Checked}"/>         
+            </apex:column>
+        <apex:column value="{!r.Checked}"/>
+<apex:column headerValue="name 1" value="{!r.Name1}"/> 
+<apex:column headerValue="Name 2" value="{!r.Name2}"/>
+
+</apex:pageBlockTable>
+
+
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Page Block Section for Selected records" id="Block2">
+<apex:pageBlockTable value="{!SelectedRecordList}" var="s">
+
+<apex:column headerValue="Check Box">
+            <apex:inputCheckbox value="{!s.Checked}"/>         
+            </apex:column>
+        <apex:column value="{!s.Checked}"/>
+<apex:column headerValue="name 1" value="{!s.Name1}"/> 
+<apex:column headerValue="Name 2" value="{!s.Name2}"/>
+
+</apex:pageBlockTable>
+<apex:commandButton value="Selected record" action="{!SelectedRec}" reRender="Block2"/>
+
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>
